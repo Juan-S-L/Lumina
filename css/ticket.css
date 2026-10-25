@@ -1,0 +1,481 @@
+.stepper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: nowrap;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* 1. Estado Completado */
+.step.completed {
+    color: #d1d5db;
+}
+.step.completed .step-circle {
+    background-color: #171d2d;
+    color: #f59e0b; /* Color del checkmark */
+    font-size: 16px;
+}
+
+/* 2. Estado Activo (Brillo y Píldora) */
+.step.active {
+    background-color: rgba(245, 158, 11, 0.15);
+    padding: 6px 20px 6px 6px;
+    border-radius: 50px;
+    color: #f59e0b;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.25);
+}
+.step.active .step-circle {
+    background-color: #f59e0b;
+    color: #0b0e14;
+    font-weight: 700;
+}
+
+/* 3. Estado Inactivo / Pendiente */
+.step.inactive {
+    color: #4b5563;
+}
+.step.inactive .step-circle {
+    background-color: #131926;
+    color: #4b5563;
+}
+
+/* Línea conectora entre pasos */
+.step-divider {
+    width: 40px;
+    height: 1px;
+    background-color: #1f293d;
+    flex-shrink: 0;
+}
+
+/* Botón volver */
+.theme-info.btn-subtle {
+    width: 44px;
+    height: 44px;
+    text-decoration: none;
+    border: 1px solid #1f293d;
+}
+
+/* Overline del título */
+.ticket-overline {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+/* Helpers de texto pequeños (reemplazan estilos inline) */
+.label-xs {
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+}
+.label-xxs {
+    font-size: 0.7rem;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991.98px) {
+    /* En tablet/móvil el stepper va debajo y ocupa todo el ancho */
+    .stepper {
+        justify-content: space-between;
+        gap: .25rem;
+    }
+    .step-divider {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /* Compacta el stepper en móviles pequeños: oculta las etiquetas de texto,
+       deja solo los círculos conectados por las líneas */
+    .step {
+        gap: 0;
+        font-size: 0;
+    }
+    .step span {
+        display: none;
+    }
+    .step.active {
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .step.active .step-circle {
+        background-color: #f59e0b;
+        color: #0b0e14;
+    }
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .step-divider {
+        width: auto;
+        flex: 1 1 auto;
+        margin: 0 .15rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ----------- Peliculas - seccion izq ------------- */
+.cinema-container {
+    background-color: #0d1322;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Leyenda superior */
+.legend-bar {
+    background-color: #131b2e;
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Efecto Pantalla Curva */
+.screen-container {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.screen-line {
+    height: 12px;
+    width: 80%;
+    margin: 0 auto 10px;
+    border-top: 3px solid #38bdf8;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    box-shadow: 0 -8px 18px rgba(56, 189, 248, 0.4);
+}
+
+
+/* Contenedor con scroll horizontal para pantallas angostas */
+.seats-scroller {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+}
+.seats-scroller::-webkit-scrollbar {
+    height: 6px;
+}
+.seats-scroller::-webkit-scrollbar-thumb {
+    background-color: #1f293d;
+    border-radius: 3px;
+}
+
+/* Mapa de Asientos */
+.seats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    min-width: max-content;
+    margin: 0 auto;
+    padding: 0 4px;
+}
+
+.seat-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.row-label {
+    width: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.seat-block {
+    display: flex;
+    gap: 6px;
+}
+
+.block-divider {
+    width: 20px; /* Espacio de pasillo entre bloques */
+}
+
+/* Botón de Asiento */
+.seat {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1a2336;
+    color: #9ca3af;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.seat:hover:not(.occupied) {
+    transform: scale(1.1);
+    background-color: #2a3754;
+    color: #fff;
+}
+
+/* Estado: Ocupado */
+.seat.occupied {
+    background-color: #111625;
+    color: #374151;
+    cursor: not-allowed;
+}
+
+/* Estado: VIP (Filas F, G, H) */
+.seat.vip {
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Estado: Seleccionado (Brillo Dorado) */
+.seat.selected {
+    background-color: #f59e0b !important;
+    color: #0d1322 !important;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+    font-weight: 800;
+}
+
+/* Estilos leyenda */
+.box-available { background-color: #1a2336; border: 1px solid #374151; }
+.box-occupied { background-color: #111625; color: #6b7280; }
+.box-selected { background-color: #f59e0b; color: #0d1322; box-shadow: 0 0 10px rgba(245, 158, 11, 0.5); }
+.box-vip { background-color: #131b2e; border: 1px solid #38bdf8; color: #38bdf8; }
+
+/* Pie de página */
+.footer-info {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #6b7280;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* ----------- Peliuclas - seccion der */
+/* Tarjeta Principal del Resumen */
+.summary-card {
+    background-color: #0d1322;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #172033;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Insignia PASO 2 DE 4 */
+.step-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de Etiquetas de Asientos */
+.seats-tags-container {
+    background-color: #070a12;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+.seat-tag {
+    background-color: #131b2e;
+    border: 1px solid #1f2d47;
+    color: #e5e7eb;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seat-tag i {
+    color: #f59e0b;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+/* Divisor tenue */
+.divider-dotted {
+    border-top: 1px dashed #1e293b;
+    margin: 20px 0;
+}
+
+/* Cuadro de Total */
+.total-card {
+    background-color: #060911;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.total-price {
+    color: #f59e0b;
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Botón Primario */
+.btn-checkout {
+    background-color: #f59e0b;
+    color: #0d1322;
+    border: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 14px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+}
+
+.btn-checkout:hover {
+    background-color: #d97706;
+    color: #0d1322;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+}
+
+/* Botón Secundario (Snacks) */
+.btn-snacks {
+    background-color: #131b2e;
+    border: 1px solid #1f2d47;
+    color: #f59e0b;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 12px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.btn-snacks:hover {
+    background-color: #1a253e;
+    color: #f59e0b;
+    border-color: #2b3d5e;
+}
+
+/* Enlaces del pie */
+.back-link {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #ffffff;
+}
+
+.lock-notice {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* ===================== AJUSTES RESPONSIVE EXTRA ===================== */
+@media (max-width: 991.98px) {
+    /* Menos padding interior de la tarjeta del cine en pantallas medianas */
+    .cinema-container {
+        padding: 24px;
+    }
+    .legend-bar {
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cinema-container {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    .summary-card {
+        padding: 18px;
+        border-radius: 12px;
+    }
+    .legend-bar {
+        gap: 12px 18px;
+        padding: 12px;
+        font-size: 0.78rem;
+        margin-bottom: 22px;
+    }
+    .legend-box {
+        width: 20px;
+        height: 20px;
+    }
+    .screen-container {
+        margin-bottom: 22px;
+    }
+    .footer-info {
+        margin-top: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .total-price {
+        font-size: 1.6rem;
+    }
+    /* En pantallas muy angostas el resumen puede quedar pegado:
+       dejamos un poco de aire inferior */
+    .summary-card {
+        margin-bottom: 8px;
+    }
+}
