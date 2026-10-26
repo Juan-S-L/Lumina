@@ -1,8 +1,8 @@
 .card-img-top {
   width: 100%;
-  height: 200px;           /* El alto que prefieras */
+  height: 200px;
   object-fit: cover;
-  object-position: top;    /* Hace que se muestre la parte de arriba de la imagen */
+  object-position: top;
 }
 
 /* 2. Crear el efecto de gradiente hacia el contenido */
