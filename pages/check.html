@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/ticket.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar md:navbar-expand bg-1">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html">
+                <img src="../assets/logo.png" alt="Logo de Luminia Cinema" height="60">
+            </a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menú</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body mb-2 md:mb-0">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./snacks.html">Snacks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Próximamente</a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <main class="container my-4 lg:my-5">
+        <div class="row align-items-center g-4">
+            <!-- Columna izquierda: botón volver + título -->
+            <div class="col-2 lg:col-6">
+                <div class="d-flex align-items-center gap-3 gap-lg-4">
+                    <a href="./snacks.html" class="theme-info btn-subtle rounded-pill d-inline-flex align-items-center justify-content-center flex-shrink-0" aria-label="Volver">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna derecha: stepper de progreso -->
+            <div class="col-10 lg:col-6">
+                <div class="stepper w-100 lg:justify-content-end">
+                    <div class="step completed">
+                        <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+                        <span>Horario</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step completed">
+                        <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+                        <span>Asientos</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step completed">
+                        <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+                        <span>Snacks</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step active">
+                        <div class="step-circle">4</div>
+                        <span>Pago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center g-4 mt-1">
+            <div class="col-12 lg:col-8">
+                <div class="info-container mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-12 md:col-5 lg:col-2">
+                            <img class="w-100" src="https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg" alt="" srcset="">
+                        </div>
+                        <div class="col-12 md:col-7 lg:col-10">
+                            <ul class="list-group list-group-horizontal list-unstyled gap-2 fs-sm">
+                                <li class="list-group-item rounded bg-dark text-white border-0">Sala 1 - super cul</li>
+                                <li class="list-group-item rounded bg-dark text-white border-0">No se que mas poner</li>
+                            </ul>
+                            <h2>Nombre de la pelicula</h2>
+                            <p><i class="bi bi-calendar"></i> Hoy # Mes</p>
+                            <div class="d-flex gap-5">
+                                <p>Asientos:</p>
+                                <p class="bg-subtle-warning py-1 px-5 rounded"><i class="bi bi-ticket-perforated"></i> Asiento N#</p>
+                                <p class="bg-subtle-warning py-1 px-5 rounded"><i class="bi bi-ticket-perforated"></i> Asiento N#</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-container bg-dark rounded-4 p-4 border border-secondary">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <h4 class="text-white m-0">Método de Pago</h4>
+                        <i class="bi bi-lock-fill text-warning fs-5"></i>
+                    </div>
+                    <p class="text-secondary small mb-4">Selecciona tu plataforma y completa la transacción cifrada.</p>
+                    
+                    <!-- Pestañas de métodos de pago -->
+                    <div class="row text-center mb-4 g-2">
+                        <div class="col-3">
+                            <button class="btn btn-outline-warning w-100 py-3 d-flex flex-column align-items-center active" style="background-color: rgba(245, 158, 11, 0.1);">
+                                <i class="bi bi-credit-card fs-4 mb-1"></i>
+                                <span class="small fw-bold">Tarjeta</span>
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-outline-secondary w-100 py-3 d-flex flex-column align-items-center border-0">
+                                <i class="bi bi-paypal fs-4 mb-1"></i>
+                                <span class="small">PayPal</span>
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-outline-secondary w-100 py-3 d-flex flex-column align-items-center border-0">
+                                <i class="bi bi-apple fs-4 mb-1"></i>
+                                <span class="small">Apple Pay</span>
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-outline-secondary w-100 py-3 d-flex flex-column align-items-center border-0">
+                                <i class="bi bi-google fs-4 mb-1"></i>
+                                <span class="small">G Pay</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Formulario Simulado -->
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label text-secondary small">Número de Tarjeta</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="0000 0000 0000 0000">
+                                <span class="input-group-text bg-transparent border-secondary text-warning"><i class="bi bi-shield-check"></i></span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label text-secondary small">Nombre del Titular</label>
+                            <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="JUAN">
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <label class="form-label text-secondary small">Expiración (MM/AA)</label>
+                                <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="MM/AA">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label text-secondary small">Código CVV</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control bg-transparent text-white border-secondary" placeholder="•••">
+                                    <span class="input-group-text bg-transparent border-secondary text-secondary"><i class="bi bi-lock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="border-secondary mb-4">
+
+                        <h5 class="text-white mb-1">Envío de Boletos Digitales</h5>
+                        <p class="text-secondary small mb-3">Los pases de acceso QR se enviarán de forma instantánea tras la confirmación.</p>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-secondary small">Correo Electrónico</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-secondary text-secondary"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control bg-transparent text-white border-secondary" placeholder="correo@gmail.com">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-secondary small">Teléfono Móvil</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-secondary text-secondary"><i class="bi bi-whatsapp"></i></span>
+                                    <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="+57 300 000 0000">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- culmna derecha de pago -->
+            <div class="col-12 lg:col-4">
+                <div class="summary-card position-sticky bg-dark p-0 border border-secondary" style="top: 20px; border-radius: 16px;">
+                    
+                    <!-- Parte superior: Encabezado del ticket -->
+                    <div class="p-4 border-bottom border-secondary position-relative">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="text-uppercase text-secondary fw-bold small"><i class="bi bi-ticket-detailed me-2"></i>Recibo de reserva</span>
+                            <span class="badge bg-warning text-dark">EN PROCESO</span>
+                        </div>
+                        
+                        <p class="text-warning small text-uppercase mb-1">Función Exclusiva</p>
+                        <h4 class="text-white fw-bold mb-1">Título de la Película</h4>
+                        <p class="text-secondary small mb-0">Sala 1 IMAX • Hoy 24 Oct • 07:30 PM</p>
+                        
+                        <!-- Recortes laterales estilo ticket de cine (opcional usando CSS, aquí usamos pseudo-clases en un CSS externo o simplemente lo dejamos limpio) -->
+                    </div>
+
+                    <!-- Parte media: Desglose de compras -->
+                    <div class="p-4 border-bottom border-secondary border-bottom-dashed">
+                        
+                        <!-- Boletos -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-end mb-2">
+                                <small class="text-secondary text-uppercase" style="font-size: 0.7rem; letter-spacing: 1px;">Boletos de entrada</small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-white small"><span class="text-warning fw-bold me-1">2x</span> Entrada VIP (F7, F8)</span>
+                                <span class="text-white fw-bold small">$22.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Confitería -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-end mb-2">
+                                <small class="text-secondary text-uppercase" style="font-size: 0.7rem; letter-spacing: 1px;">Confitería & Snacks</small>
+                                <small class="text-secondary" style="font-size: 0.65rem;">Bar Luminia</small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="text-white small"><span class="text-warning fw-bold me-1">1x</span> Combo Dúo Mega</span>
+                                <span class="text-white fw-bold small">$14.50</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-white small"><span class="text-warning fw-bold me-1">1x</span> Palomitas Caramelo</span>
+                                <span class="text-white fw-bold small">$6.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Subtotales -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <small class="text-secondary">Subtotal Boletos (2)</small>
+                            <small class="text-white">$22.00</small>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <small class="text-secondary">Subtotal Snacks</small>
+                            <small class="text-white">$20.50</small>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-secondary">Impuestos y tasas <i class="bi bi-info-circle ms-1"></i></small>
+                            <small class="text-white">$2.50</small>
+                        </div>
+                    </div>
+
+                    <!-- Parte inferior: Total y Botón -->
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <div class="text-white fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 1px;">Total a cancelar</div>
+                                <small class="text-info" style="font-size: 0.7rem;">Cargos finales en USD</small>
+                            </div>
+                            <div class="text-warning fw-bold" style="font-size: 2rem;">$45.00</div>
+                        </div>
+
+                        <button class="btn btn-warning w-100 fw-bold py-3 text-dark d-flex justify-content-center align-items-center gap-2" style="box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
+                            <i class="bi bi-lock-fill"></i> PAGAR $45.00
+                        </button>
+                        
+                        <p class="text-center text-secondary mt-3 mb-0" style="font-size: 0.7rem;">
+                            <i class="bi bi-shield-check me-1"></i> Transacción cifrada de extremo a extremo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-1">
+        <div class="container py-6">
+            <div class="row justify-content-center gap-4">
+                <div class="lg:col-5 md:col-5 sm:col-12">
+                    <h4 class="text-warning">Luminia Cinema</h4>
+                    <p class="text-secondary">Tu experiencia cinematográfica de otro nivel. Reserva tus entradas, elige tus snacks favoritos y disfruta de las mejores salas de la ciudad.</p>
+                </div>
+                <div class="lg:col-5 md:col-5 sm:col-12">
+                    <h4 class="text-warning">Métodos de pago</h4>
+                    <p class="text-secondary">Aceptamos todas las tarjetas de crédito, débito y pagos digitales a través de nuestra plataforma segura.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <i class="bi bi-credit-card fs-2"></i>
+                        <i class="bi bi-wallet2 fs-2"></i>
+                        <i class="bi bi-phone fs-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</body>
+</html>
