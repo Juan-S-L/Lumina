@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/ticket.css">
+    <link rel="stylesheet" href="../css/snacks.css">
+    <title>Lumina - Snacks</title>
+</head>
+<body>
+    <nav class="navbar md:navbar-expand bg-1">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html">
+                <img src="../assets/logo.png" alt="Logo de Luminia Cinema" height="60">
+            </a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menú</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body mb-2 md:mb-0">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Snacks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Próximamente</a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <main class="container my-4 lg:my-5">
+        <div class="row align-items-center g-4 ticket-header">
+            <!-- Columna izquierda: botón volver + título -->
+            <div class="col-2 lg:col-6">
+                <div class="d-flex align-items-center gap-3 gap-lg-4">
+                    <a href="./ticket.html" class="theme-info btn-subtle rounded-pill d-inline-flex align-items-center justify-content-center flex-shrink-0" aria-label="Volver">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna derecha: stepper de progreso -->
+            <div class="col-10 lg:col-6">
+                <div class="stepper w-100 lg:justify-content-end">
+                    <div class="step completed">
+                        <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+                        <span>Horario</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step completed">
+                        <div class="step-circle"><i class="bi bi-check-lg"></i></div>
+                        <span>Asientos</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step active">
+                        <div class="step-circle">3</div>
+                        <span>Snacks</span>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step inactive">
+                        <div class="step-circle">4</div>
+                        <span>Pago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center g-4 mt-1">
+            <div class="col-12 lg:col-8">
+                <div class="promo-container">
+                    <div class="row align-items-center">
+                        <div class="col-12 lg:col-8">
+                            <div class="contains-inline mb-3">
+                                <ul class="list-group list-group-horizontal list-unstyled gap-2">
+                                    <li class="list-group-item rounded bg-dark text-white border-0">AHORRA 25% HOY</li>
+                                    <li class="list-group-item rounded bg-dark text-white border-0">Mas Pedido</li>
+                                </ul>
+                            </div>
+                            <h2>Combo pareja omaiga - compralo o te pego</h2>
+                            <p>2 cubos de Popcorn gigantes + 3 bebidas a eleccion + Paquete grande de chocolates bien ricos para disfrutar la funcion</p>
+                            <div class="d-flex align-items-center gap-5">
+                                <span class="fw-bold fs-lg">$55.000</span>
+                                <small class="fs-md text-decoration-line-through">$55.000</small>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-4 text-center">
+                            <img class="w-100 sm:my-5" src="../assets/comida_promo.jpg" alt="Comida promo">
+                            <button class="btn" type="button">
+                                <i class="bi bi-cart"></i>
+                                Agregar promo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <h3>Menu</h3>
+                <div class="row flex-nowrap md:flex-wrap overflow-x-auto g-4 pb-3" style="-webkit-overflow-scrolling: touch;">
+                    <div class="sm:col-6 md:col-4">
+                        <div class="card" style="max-width: 320px">
+                            <img class="card-img-top" src="../assets/comida1.jpg" alt="Comida 1">
+                            <div class="card-body">
+                                <h4 class="card-title">Combo duo mega</h4>
+                                <p class="card-text">Palomitas grandes con mantequilla + 2 refrescos</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary">
+                                    <span class="fs-5 fw-bold text-white">$14.50</span>
+                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                        <button class="btn btn-outline-secondary text-white" type="button"><i class="bi bi-dash"></i></button>
+                                        <input type="text" class="form-control text-center bg-dark text-white border-secondary px-0" value="0" readonly>
+                                        <button class="btn btn-warning text-dark" type="button"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:col-6 md:col-4">
+                        <div class="card" style="max-width: 320px">
+                            <img class="card-img-top" src="../assets/comida2.jpg" alt="Comida 1">
+                            <div class="card-body">
+                                <h4 class="card-title">Palomitas clasicas mantequilladas</h4>
+                                <p class="card-text">Maiz explotado ocn doble baño de mantequilla</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary">
+                                    <span class="fs-5 fw-bold text-white">$14.50</span>
+                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                        <button class="btn btn-outline-secondary text-white" type="button"><i class="bi bi-dash"></i></button>
+                                        <input type="text" class="form-control text-center bg-dark text-white border-secondary px-0" value="0" readonly>
+                                        <button class="btn btn-warning text-dark" type="button"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:col-6 md:col-4">
+                        <div class="card" style="max-width: 320px">
+                            <img class="card-img-top" src="../assets/comida3.jpg" alt="Comida 1">
+                            <div class="card-body">
+                                <h4 class="card-title">Palomitas caramelo</h4>
+                                <p class="card-text">Caramelo artesanal tostado</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary">
+                                    <span class="fs-5 fw-bold text-white">$14.50</span>
+                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                        <button class="btn btn-outline-secondary text-white" type="button"><i class="bi bi-dash"></i></button>
+                                        <input type="text" class="form-control text-center bg-dark text-white border-secondary px-0" value="0" readonly>
+                                        <button class="btn btn-warning text-dark" type="button"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:col-6 md:col-4">
+                        <div class="card" style="max-width: 320px">
+                            <img class="card-img-top" src="../assets/comida4.jpg" alt="Comida 1">
+                            <div class="card-body">
+                                <h4 class="card-title">Refresco ICEE</h4>
+                                <p class="card-text">Bebida clasica congelada ultra refrescante</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary">
+                                    <span class="fs-5 fw-bold text-white">$14.50</span>
+                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                        <button class="btn btn-outline-secondary text-white" type="button"><i class="bi bi-dash"></i></button>
+                                        <input type="text" class="form-control text-center bg-dark text-white border-secondary px-0" value="0" readonly>
+                                        <button class="btn btn-warning text-dark" type="button"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:col-6 md:col-4">
+                        <div class="card" style="max-width: 320px">
+                            <img class="card-img-top" src="../assets/comida5.jpg" alt="Comida 1">
+                            <div class="card-body">
+                                <h4 class="card-title">Nachos supremos con cheddar</h4>
+                                <p class="card-text">Totopos crijientes de maiz</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary">
+                                    <span class="fs-5 fw-bold text-white">$14.50</span>
+                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                        <button class="btn btn-outline-secondary text-white" type="button"><i class="bi bi-dash"></i></button>
+                                        <input type="text" class="form-control text-center bg-dark text-white border-secondary px-0" value="0" readonly>
+                                        <button class="btn btn-warning text-dark" type="button"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:col-6 md:col-4">
+                        <div class="card" style="max-width: 320px">
+                            <img class="card-img-top" src="../assets/comida6.jpg" alt="Comida 1">
+                            <div class="card-body">
+                                <h4 class="card-title">M&M's Chocolate grande</h4>
+                                <p class="card-text">Autentico chocolate con leche envuelto en su crocante capa</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary">
+                                    <span class="fs-5 fw-bold text-white">$14.50</span>
+                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                        <button class="btn btn-outline-secondary text-white" type="button"><i class="bi bi-dash"></i></button>
+                                        <input type="text" class="form-control text-center bg-dark text-white border-secondary px-0" value="0" readonly>
+                                        <button class="btn btn-warning text-dark" type="button"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 lg:col-4">
+                <div class="summary-card position-sticky bg-dark rounded-4 p-4 border border-secondary" style="top: 20px;">
+                    <!-- Encabezado y Película -->
+                    <div class="mb-3 pb-3 border-bottom border-secondary">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="text-uppercase text-secondary fw-bold m-0" style="font-size: 0.75rem;">Resumen de orden</h6>
+                            <span class="badge bg-secondary text-white">Sala 1 • IMAX</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <img src="../assets/poster-miniatura.jpg" alt="Poster" class="rounded" style="width: 45px; height: 65px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold text-white mb-1">Título de la Película</h6>
+                                <small class="text-secondary d-block" style="font-size: 0.75rem;">Hoy, 20:30 hrs • 2D Doblada</small>
+                                <small class="text-warning fw-bold" style="font-size: 0.75rem;"><i class="bi bi-person-fill"></i> Butacas F7, F8</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desglose Entradas -->
+                    <div class="mb-3 pb-3 border-bottom border-secondary">
+                        <small class="text-uppercase text-secondary fw-bold d-block mb-2" style="font-size: 0.7rem;">Desglose</small>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-white">Entradas Sala VIP (x2)</span>
+                            <span class="small fw-bold text-white">$22.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Desglose Snacks (Contenedor Dinámico) -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.7rem;">Snacks Seleccionados</small>
+                            <span class="badge bg-secondary">2 Ítems</span>
+                        </div>
+                        
+                        <!-- Ítem de ejemplo 1 -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <div>
+                                <span class="d-block text-white small fw-semibold">Combo Dúo Mega</span>
+                                <span class="text-secondary" style="font-size: 0.75rem;">1 x $14.50</span>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="text-white small fw-bold">$14.50</span>
+                                <i class="bi bi-trash3 text-secondary" style="cursor:pointer; font-size: 0.8rem;"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Ítem de ejemplo 2 -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <div>
+                                <span class="d-block text-white small fw-semibold">Palomitas Caramelo</span>
+                                <span class="text-secondary" style="font-size: 0.75rem;">1 x $6.00</span>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="text-white small fw-bold">$6.00</span>
+                                <i class="bi bi-trash3 text-secondary" style="cursor:pointer; font-size: 0.8rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total y Botón -->
+                    <div class="total-card mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <small class="text-secondary" style="font-size: 0.8rem;">Subtotal Snacks:</small>
+                            <span class="text-white fw-bold">$20.50</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="fw-bold text-uppercase text-white" style="font-size: 0.75rem;">TOTAL COMBINADO</div>
+                                <div class="text-info" style="font-size: 0.65rem;">Impuestos y cargos incluidos</div>
+                            </div>
+                            <div class="total-price text-warning fs-2 fw-bold" id="total-price">$42.50</div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-warning w-100 fw-bold py-2 mb-3 text-dark">
+                        FINALIZAR Y PAGAR
+                    </button>
+
+                    <div class="text-center">
+                        <a href="./ticket.html" class="text-secondary text-decoration-none" style="font-size: 0.75rem;">
+                            <i class="bi bi-dash me-1"></i>Volver y modificar selección de asientos
+                        </a>
+                    </div>
+                </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-1">
+        <div class="container py-6">
+            <div class="row justify-content-center gap-4">
+                <div class="lg:col-5 md:col-5 sm:col-12">
+                    <h4 class="text-warning">Luminia Cinema</h4>
+                    <p class="text-secondary">Tu experiencia cinematográfica de otro nivel. Reserva tus entradas, elige tus snacks favoritos y disfruta de las mejores salas de la ciudad.</p>
+                </div>
+                <div class="lg:col-5 md:col-5 sm:col-12">
+                    <h4 class="text-warning">Métodos de pago</h4>
+                    <p class="text-secondary">Aceptamos todas las tarjetas de crédito, débito y pagos digitales a través de nuestra plataforma segura.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <i class="bi bi-credit-card fs-2"></i>
+                        <i class="bi bi-wallet2 fs-2"></i>
+                        <i class="bi bi-phone fs-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</body>
+</html>
