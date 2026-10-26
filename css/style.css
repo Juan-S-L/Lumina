@@ -19,3 +19,15 @@
   height: 100px;
   background: linear-gradient(to bottom, transparent, #000000); 
 }
+
+.info-container {
+    background-color: #0d1322;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.border-bottom-dashed {
+    border-bottom: 2px dashed #495057 !important;
+}

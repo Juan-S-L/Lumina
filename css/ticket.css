@@ -138,13 +138,6 @@
 }
 
 /* ----------- Peliculas - seccion izq ------------- */
-.cinema-container {
-    background-color: #0d1322;
-    border-radius: 16px;
-    padding: 30px;
-    width: 100%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
 
 /* Leyenda superior */
 .legend-bar {
@@ -465,8 +458,6 @@
     .total-price {
         font-size: 1.6rem;
     }
-    /* En pantallas muy angostas el resumen puede quedar pegado:
-       dejamos un poco de aire inferior */
     .summary-card {
         margin-bottom: 8px;
     }
