@@ -42,8 +42,10 @@
     <main>
         <!-- Sección de estreno principal (Carrusel dinámico) -->
         <section class="container py-5">
-            <div id="header-container-carrusel" class="row align-items-center">
-                
+            <div class="carousel slide" data-bs-autoplay="true" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+                <div id="header-container-carrusel" class="carousel-inner">
+                    
+                </div>
             </div>
         </section>
 
@@ -119,127 +121,10 @@
                     </div>
                 </div>
                 
-                <div class="row gap-4 justify-content-center" id="movies-container">
+                <div id="catalogo-container" class="row gap-4 justify-content-center" id="movies-container">
                     
                     <!-- Tarjeta Película 1 -->
-                    <div class="card bg-dark text-white sm:col-12 md:col-4 lg:col-4 border-0 shadow" style="max-width: 350px">
-                        <div class="card-img-container rounded-top overflow-hidden">
-                            <img class="card-img-top w-100" src="https://m.media-amazon.com/images/M/MV5BNzlkNjBmOWUtOTgzZS00OWIzLThkNWEtZTg5MGY2ODAyYzZjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg" alt="Póster película" style="height: 300px; object-fit: cover;">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">El Renacido</h4>
-                            <p class="card-text text-secondary mb-3">Horarios para hoy</p>
-                            
-                            <div class="row text-center justify-content-center g-2 mb-4">
-                                <!-- Función finalizada (deshabilitada) -->
-                                <div class="col-6">
-                                    <button class="btn btn-outline-secondary w-100 py-2 disabled" aria-disabled="true">
-                                        <span class="d-block fw-bold">11:30 AM</span>
-                                        <small class="d-block" style="font-size: 0.7rem;">Finalizada</small>
-                                    </button>
-                                </div>
-                                <!-- Función disponible -->
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">04:15 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">07:30 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">10:00 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-light w-100 mt-auto">Más información</button>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white sm:col-12 md:col-4 lg:col-4 border-0 shadow" style="max-width: 350px">
-                        <div class="card-img-container rounded-top overflow-hidden">
-                            <img class="card-img-top w-100" src="https://m.media-amazon.com/images/M/MV5BNzlkNjBmOWUtOTgzZS00OWIzLThkNWEtZTg5MGY2ODAyYzZjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg" alt="Póster película" style="height: 300px; object-fit: cover;">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">El Renacido</h4>
-                            <p class="card-text text-secondary mb-3">Horarios para hoy</p>
-                            
-                            <div class="row text-center justify-content-center g-2 mb-4">
-                                <!-- Función finalizada (deshabilitada) -->
-                                <div class="col-6">
-                                    <button class="btn btn-outline-secondary w-100 py-2 disabled" aria-disabled="true">
-                                        <span class="d-block fw-bold">11:30 AM</span>
-                                        <small class="d-block" style="font-size: 0.7rem;">Finalizada</small>
-                                    </button>
-                                </div>
-                                <!-- Función disponible -->
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">04:15 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">07:30 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">10:00 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-light w-100 mt-auto">Más información</button>
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white sm:col-12 md:col-4 lg:col-4 border-0 shadow" style="max-width: 350px">
-                        <div class="card-img-container rounded-top overflow-hidden">
-                            <img class="card-img-top w-100" src="https://m.media-amazon.com/images/M/MV5BNzlkNjBmOWUtOTgzZS00OWIzLThkNWEtZTg5MGY2ODAyYzZjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg" alt="Póster película" style="height: 300px; object-fit: cover;">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title fw-bold">El Renacido</h4>
-                            <p class="card-text text-secondary mb-3">Horarios para hoy</p>
-                            
-                            <div class="row text-center justify-content-center g-2 mb-4">
-                                <!-- Función finalizada (deshabilitada) -->
-                                <div class="col-6">
-                                    <button class="btn btn-outline-secondary w-100 py-2 disabled" aria-disabled="true">
-                                        <span class="d-block fw-bold">11:30 AM</span>
-                                        <small class="d-block" style="font-size: 0.7rem;">Finalizada</small>
-                                    </button>
-                                </div>
-                                <!-- Función disponible -->
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">04:15 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">07:30 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-warning w-100 py-2">
-                                        <span class="d-block fw-bold text-dark">10:00 PM</span>
-                                        <small class="d-block text-dark" style="font-size: 0.7rem;">Disponible</small>
-                                    </button>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-light w-100 mt-auto">Más información</button>
-                        </div>
-                    </div>
-
+                    
                     <!-- Recordatorio: duplicar x cantidad en js -->
 
                 </div>
