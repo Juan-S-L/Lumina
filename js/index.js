@@ -155,6 +155,46 @@ const obtenerPelicula = async () => {
   } catch (error) {
     console.log("Algo está fallando");
   }
+
+  header_contenedor.addEventListener("click", (evento) => {
+    const boton = evento.target.closest(".seleccionar-pelicula");
+    if (!boton) return;
+
+    const carrusel = boton.closest(".carousel-item");
+    const titulo = carrusel.querySelector("h1").textContent;
+    const poster = carrusel.querySelector("img").src;
+
+    const peliculaSeleccionada =  {
+        Title: titulo,
+        Poster: poster,
+    }
+
+    localStorage.setItem(
+        "peliculaSeleccionada", JSON.stringify(peliculaSeleccionada)
+    )
+
+    window.location.href = "./ticket.html";
+  });
+  catalogo_contenedor.addEventListener("click", (evento) => {
+    const boton = evento.target.closest(".seleccionar-pelicula");
+    if (!boton) return;
+
+    const tarjeta = boton.closest(".card");
+    const titulo = tarjeta.querySelector(".card-title").textContent;
+    const poster = tarjeta.querySelector("img").src;
+
+    const peliculaSeleccionada =  {
+        Title: titulo,
+        Poster: poster,
+    }
+
+    localStorage.setItem(
+        "peliculaSeleccionada", JSON.stringify(peliculaSeleccionada)
+    )
+
+    window.location.href = "./ticket.html";
+  });
+
 };
 
 obtenerPelicula();
