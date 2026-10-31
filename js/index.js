@@ -16,7 +16,7 @@ async function peliculas() {
     const datosRespuestaPeliculas = await respuestaPeliculas.json();    
     return datosRespuestaPeliculas
   } catch (error) {
-    console.log(f`hubo un error: ${error}`);
+    console.log(f`Hay un error al traer la api de todas las peliculas: ${error}`);
   }
 }
 
@@ -153,7 +153,7 @@ const obtenerPelicula = async () => {
     });
 
   } catch (error) {
-    console.log("Algo está fallando");
+    console.log("Hay un error al traer la informacion detallada de la pelicula");
   }
 
   header_contenedor.addEventListener("click", (evento) => {
