@@ -219,21 +219,21 @@
                             <span class="badge bg-secondary text-white">Sala 1 • IMAX</span>
                         </div>
                         <div class="d-flex gap-3">
-                            <img src="../assets/poster-miniatura.jpg" alt="Poster" class="rounded" style="width: 45px; height: 65px; object-fit: cover;">
+                            <img id="summary-poster" src="../assets/poster-miniatura.jpg" alt="Poster" class="rounded" style="width: 45px; height: 65px; object-fit: cover;">
                             <div>
-                                <h6 class="fw-bold text-white mb-1">Título de la Película</h6>
+                                <h6 id="summary-movie-title" class="fw-bold text-white mb-1">Título de la Película</h6>
                                 <small class="text-secondary d-block" style="font-size: 0.75rem;">Hoy, 20:30 hrs • 2D Doblada</small>
-                                <small class="text-warning fw-bold" style="font-size: 0.75rem;"><i class="bi bi-person-fill"></i> Butacas F7, F8</small>
+                                <small id="summary-seats" class="text-warning fw-bold" style="font-size: 0.75rem;"><i class="bi bi-person-fill me-1"></i> Butacas: -</small>
                             </div>
                         </div>
                     </div>
 
                     <!-- Desglose Entradas -->
                     <div class="mb-3 pb-3 border-bottom border-secondary">
-                        <small class="text-uppercase text-secondary fw-bold d-block mb-2" style="font-size: 0.7rem;">Desglose</small>
+                        <small class="text-uppercase text-secondary fw-bold d-block mb-2" style="font-size: 0.7rem;">Desglose Entradas</small>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="small text-white">Entradas Sala VIP (x2)</span>
-                            <span class="small fw-bold text-white">$22.00</span>
+                            <span id="summary-tickets-count" class="small text-white">Entradas (x0)</span>
+                            <span id="summary-tickets-subtotal" class="small fw-bold text-white">$0</span>
                         </div>
                     </div>
 
@@ -241,31 +241,12 @@
                     <div class="mb-4">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.7rem;">Snacks Seleccionados</small>
-                            <span class="badge bg-secondary">2 Ítems</span>
+                            <span id="summary-snacks-count-badge" class="badge bg-secondary">0 Ítems</span>
                         </div>
                         
-                        <!-- Ítem de ejemplo 1 -->
-                        <div class="d-flex justify-content-between mb-2">
-                            <div>
-                                <span class="d-block text-white small fw-semibold">Combo Dúo Mega</span>
-                                <span class="text-secondary" style="font-size: 0.75rem;">1 x $14.50</span>
-                            </div>
-                            <div class="d-flex gap-2 align-items-center">
-                                <span class="text-white small fw-bold">$14.50</span>
-                                <i class="bi bi-trash3 text-secondary" style="cursor:pointer; font-size: 0.8rem;"></i>
-                            </div>
-                        </div>
-                        
-                        <!-- Ítem de ejemplo 2 -->
-                        <div class="d-flex justify-content-between mb-2">
-                            <div>
-                                <span class="d-block text-white small fw-semibold">Palomitas Caramelo</span>
-                                <span class="text-secondary" style="font-size: 0.75rem;">1 x $6.00</span>
-                            </div>
-                            <div class="d-flex gap-2 align-items-center">
-                                <span class="text-white small fw-bold">$6.00</span>
-                                <i class="bi bi-trash3 text-secondary" style="cursor:pointer; font-size: 0.8rem;"></i>
-                            </div>
+                        <!-- Aquí JavaScript insertará los snacks agregados -->
+                        <div id="summary-snacks-list">
+                            <small class="text-secondary d-block">Sin snacks seleccionados</small>
                         </div>
                     </div>
 
@@ -273,24 +254,24 @@
                     <div class="total-card mb-4">
                         <div class="d-flex justify-content-between align-items-center mb-1">
                             <small class="text-secondary" style="font-size: 0.8rem;">Subtotal Snacks:</small>
-                            <span class="text-white fw-bold">$20.50</span>
+                            <span id="summary-snacks-subtotal" class="text-white fw-bold">$0</span>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <div>
                                 <div class="fw-bold text-uppercase text-white" style="font-size: 0.75rem;">TOTAL COMBINADO</div>
                                 <div class="text-info" style="font-size: 0.65rem;">Impuestos y cargos incluidos</div>
                             </div>
-                            <div class="total-price text-warning fs-2 fw-bold" id="total-price">$42.50</div>
+                            <div id="total-price" class="total-price text-warning fs-2 fw-bold">$0</div>
                         </div>
                     </div>
 
-                    <button class="btn btn-warning w-100 fw-bold py-2 mb-3 text-dark">
+                    <button id="btn-finalizar-pago" class="btn btn-warning w-100 fw-bold py-2 mb-3 text-dark">
                         FINALIZAR Y PAGAR
                     </button>
 
                     <div class="text-center">
                         <a href="./ticket.html" class="text-secondary text-decoration-none" style="font-size: 0.75rem;">
-                            <i class="bi bi-dash me-1"></i>Volver y modificar selección de asientos
+                            <i class="bi bi-arrow-left me-1"></i>Volver y modificar selección de asientos
                         </a>
                     </div>
                 </div>
@@ -319,5 +300,6 @@
     </footer>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <script src="../js/snack.js"></script>
 </body>
 </html>
