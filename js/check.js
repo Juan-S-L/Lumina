@@ -4,7 +4,7 @@ const ordenGuardada =
   localStorage.getItem("reservaTicket");
 
 if (!ordenGuardada) {
-  window.location.href = "./home.html";
+  window.location.href = "../index.html";
 }
 
 const datosOrden = JSON.parse(ordenGuardada);
@@ -105,7 +105,7 @@ function vincularEventos() {
       localStorage.removeItem("peliculaSeleccionada");
       localStorage.removeItem("reservaTicket");
       localStorage.removeItem("ordenCompleta");
-      window.location.href = "./home.html";
+      window.location.href = "../index.html";
     });
 }
 
