@@ -153,6 +153,7 @@ function vincularEventos() {
       }),
       totalFinal: datosReserva.totalEntradas + Object.keys(carritoSnacks).reduce((sum, id) => {
         const snack = catalogoSnacks.find(item => item.id === id);
+        return sum + (snack ? snack.precio * carritoSnacks[id] : 0)
       }, 0)
     };
 
