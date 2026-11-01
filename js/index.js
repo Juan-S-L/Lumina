@@ -173,7 +173,7 @@ const obtenerPelicula = async () => {
         "peliculaSeleccionada", JSON.stringify(peliculaSeleccionada)
     )
 
-    window.location.href = "./ticket.html";
+    window.location.href = "./pages/ticket.html";
   });
   catalogo_contenedor.addEventListener("click", (evento) => {
     const boton = evento.target.closest(".seleccionar-pelicula");
@@ -192,7 +192,7 @@ const obtenerPelicula = async () => {
         "peliculaSeleccionada", JSON.stringify(peliculaSeleccionada)
     )
 
-    window.location.href = "./ticket.html";
+    window.location.href = "./pages/ticket.html";
   });
 
 };
